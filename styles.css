@@ -13,6 +13,9 @@
   --cream: #f5f2ec;
   --muted: rgba(245, 242, 236, 0.62);
   --muted-strong: rgba(245, 242, 236, 0.8);
+  --gold-deep: #8a6733;
+  --navy-soft: rgba(10, 31, 58, 0.74);
+  --navy-faint: rgba(10, 31, 58, 0.12);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,7 +38,7 @@ img { max-width: 100%; display: block; }
    ============================================================= */
 
 nav {
-  padding: 28px 48px;
+  padding: 18px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,6 +94,7 @@ nav {
    ============================================================= */
 
 .hero {
+  background: radial-gradient(135% 95% at 80% -15%, #16315b 0%, var(--navy) 58%);
   padding: 120px 48px 120px;
   max-width: 1200px;
   margin: 0 auto;
@@ -154,7 +158,7 @@ nav {
    ============================================================= */
 
 .section { padding: 120px 48px; }
-.section-deep { background: var(--navy-deep); border-top: 1px solid var(--navy-line); border-bottom: 1px solid var(--navy-line); }
+.section-deep { background: linear-gradient(180deg, #081a30 0%, var(--navy-deep) 100%); border-top: 1px solid var(--navy-line); border-bottom: 1px solid var(--navy-line); }
 .section-inner { max-width: 1200px; margin: 0 auto; }
 
 .section-head {
@@ -188,16 +192,17 @@ nav {
    GLANCE BAND (STATS)
    ============================================================= */
 
-.glance { border-top: 1px solid var(--navy-line); border-bottom: 1px solid var(--navy-line); background: var(--navy-deep); }
+.glance { border-top: 3px solid var(--gold); border-bottom: 1px solid var(--navy-line); background: linear-gradient(180deg, #0c2444 0%, var(--navy-deep) 100%); }
 .glance-inner {
   max-width: 1200px; margin: 0 auto; display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.glance-cell { padding: 56px 40px; border-right: 1px solid var(--navy-line); }
+.glance-cell { padding: 52px 40px; border-right: 1px solid var(--navy-line); position: relative; }
+.glance-cell::before { content: ''; position: absolute; top: 34px; left: 40px; width: 20px; height: 2px; background: var(--gold); }
 .glance-cell:last-child { border-right: none; }
 .glance-value {
   font-family: 'Cormorant Garamond', serif; font-size: 56px;
-  color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 14px;
+  color: var(--cream); font-weight: 500; line-height: 1; margin: 16px 0 14px;
 }
 .glance-label {
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
@@ -556,3 +561,60 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.04em; color: var(--cream); opacity: 0.95; line-height: 1;
 }
 .leader-portrait-name { z-index: 2; }
+
+/* ===== full lockup (nav + footer) ===== */
+.logo-lockup { height: 62px; width: auto; display: block; }
+.footer-lockup { height: 112px; width: auto; display: block; margin-bottom: 22px; }
+@media (max-width: 768px) {
+  .logo-lockup { height: 50px; }
+  .footer-lockup { height: 92px; }
+}
+
+/* ===== LIGHT SECTIONS (cream bg, navy text) — adds light/dark rhythm ===== */
+.section-light { background: var(--cream); color: var(--navy); border-top: 1px solid var(--navy-faint); border-bottom: 1px solid var(--navy-faint); }
+.section-light .section-title,
+.section-light .standard-title,
+.section-light .milestone-body h4,
+.section-light .contact-title,
+.section-light .leader-name,
+.section-light h1, .section-light h2, .section-light h3, .section-light h4 { color: var(--navy); }
+.section-light .section-title em,
+.section-light .contact-title em,
+.section-light h1 em, .section-light h2 em { color: var(--gold-deep); }
+.section-light .section-intro,
+.section-light .sub-desc,
+.section-light .standard-text,
+.section-light .milestone-body p,
+.section-light .contact-text,
+.section-light .leader-bio,
+.section-light p { color: var(--navy-soft); }
+.section-light .eyebrow,
+.section-light .sub-sector,
+.section-light .approach-num,
+.section-light .standard-num,
+.section-light .milestone-year,
+.section-light .leader-role-line,
+.section-light .sub-number { color: var(--gold-deep); }
+.section-light .eyebrow::before { background: var(--gold-deep); }
+/* cards & blocks on light */
+.section-light .sub-card { background: #ffffff; border: 1px solid var(--navy-faint); }
+.section-light .sub-card:hover { background: #fbf8f1; }
+.section-light .approach-item { background: #ffffff; border: 1px solid var(--navy-faint); }
+.section-light .approach-item-light { background: #efe9dc; }
+.section-light .standard-item { background: #ffffff; border: 1px solid var(--navy-faint); }
+.section-light .group-diagram { background: #ffffff; }
+/* links / buttons / values on light */
+.section-light .sub-link,
+.section-light .btn-text,
+.section-light .contact-row-value { color: var(--navy); }
+.section-light .sub-link:hover,
+.section-light .btn-text:hover { color: var(--gold-deep); }
+.section-light .contact-row-label { color: rgba(10,31,58,0.55); }
+.section-light .sub-status { color: var(--gold-deep); border-color: rgba(138,103,51,0.45); }
+.section-light .sub-status.dev { color: rgba(10,31,58,0.5); border-color: rgba(10,31,58,0.2); }
+/* borders/rules on light */
+.section-light .contact-details,
+.section-light .contact-row,
+.section-light .timeline,
+.section-light .milestone { border-color: var(--navy-faint); }
+.section-light .fleuron-rule { background: var(--navy-faint); }
