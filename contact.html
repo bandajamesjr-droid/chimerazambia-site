@@ -17,13 +17,13 @@
 <meta property="og:title" content="Contact — Chimera Investment Group">
 <meta property="og:description" content="Reach Chimera Investment Group — for partnership, media, careers, or general enquiries.">
 <meta property="og:url" content="https://chimerazambia.com/contact.html">
-<meta property="og:image" content="https://chimerazambia.com/assets/chimera-logo-navy-bg.jpg">
-<meta property="og:image:width" content="842">
-<meta property="og:image:height" content="596">
+<meta property="og:image" content="https://chimerazambia.com/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact — Chimera Investment Group">
 <meta name="twitter:description" content="Reach Chimera Investment Group — for partnership, media, careers, or general enquiries.">
-<meta name="twitter:image" content="https://chimerazambia.com/assets/chimera-logo-navy-bg.jpg">
+<meta name="twitter:image" content="https://chimerazambia.com/assets/og-card.jpg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,8 +31,15 @@
 <!-- NAVIGATION -->
 <nav>
   <a href="index.html" class="logo">
-    <img class="logo-lockup" src="assets/chimera-logo-navy-trans.svg" alt="Chimera Investment Group">
+    <img class="logo-mark" src="assets/chimera-mark-nav.png" alt="" width="64" height="44">
+    <span class="logo-name">
+      CHIMERA
+      <span class="logo-sub">Investment Group</span>
+    </span>
   </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="var n=document.querySelector('.nav-links');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);this.classList.toggle('open',o)">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="about.html">The Group</a></li>
     <li><a href="businesses.html">Businesses</a></li>
@@ -113,7 +120,7 @@
 <!-- Fleuron -->
 <div class="fleuron">
   <span class="fleuron-rule left"></span>
-  <img class="fleuron-mark" src="assets/chimera-mark-hires.png" alt="">
+  <img class="fleuron-mark" src="assets/chimera-fleuron-gold.png" alt="">
   <span class="fleuron-rule right"></span>
 </div>
 
@@ -134,12 +141,12 @@
       <div class="contact-card">
         <h3>Chimera Credit Solutions</h3>
         <p>For payroll-secured credit enquiries, employer-partnership conversations, and lending business with CCS.</p>
-        <a href="#" class="email-link">Visit Credit Solutions →</a>
+        <a href="mailto:credit@chimerazambia.com" class="email-link">credit@chimerazambia.com →</a>
       </div>
       <div class="contact-card">
         <h3>Chimera Premium Poultry Farms</h3>
         <p>For retail and wholesale poultry supply enquiries, distribution partnerships, and direct purchase orders.</p>
-        <a href="#" class="email-link">Visit Premium Poultry →</a>
+        <a href="mailto:poultry@chimerazambia.com" class="email-link">poultry@chimerazambia.com →</a>
       </div>
       <div class="contact-card">
         <h3>Chimera Mineral Exchange</h3>
@@ -149,7 +156,7 @@
       <div class="contact-card">
         <h3>Chimera Technologies</h3>
         <p>In development — for KulimaAI product enquiries and Chimera Technologies business enquiries.</p>
-        <a href="#" class="email-link">Visit Chimera Technologies →</a>
+        <a href="mailto:tech@chimerazambia.com" class="email-link">tech@chimerazambia.com →</a>
       </div>
     </div>
   </div>
@@ -175,7 +182,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <img class="footer-lockup" src="assets/chimera-logo-navy-trans.svg" alt="Chimera Investment Group Ltd">
+      <img class="footer-lockup" src="assets/chimera-lockup-footer.png" alt="Chimera Investment Group Ltd">
       <p class="footer-address">222 Great East Road<br>Chainama, Lusaka<br>Republic of Zambia</p>
     </div>
     <div>
