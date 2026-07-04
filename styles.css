@@ -655,3 +655,6 @@ a:focus-visible, button:focus-visible {
   .nav-links a { display: block; padding: 16px 24px; font-size: 14px; letter-spacing: 0.06em; }
   .nav-links .nav-contact { border: none; padding: 16px 24px; }
 }
+/* real-artwork nav lockup */
+.logo-navlockup { height: 52px; width: auto; display: block; }
+@media (max-width: 880px) { .logo-navlockup { height: 42px; } }
